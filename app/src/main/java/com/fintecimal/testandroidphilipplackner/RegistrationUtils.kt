@@ -2,7 +2,7 @@ package com.fintecimal.testandroidphilipplackner
 
 object RegistrationUtils {
 
-    private val existingUser = listOf<String>("Peter","Carl")
+    private val existingUsers = listOf<String>("Peter","Carl")
 
      /*Cases
      - the input is not valid if..
@@ -14,9 +14,20 @@ object RegistrationUtils {
      fun validateRegistrationInput(
          username : String,
          password : String,
-         confirmedPaswword : String) : Boolean{
+         confirmedPassword : String) : Boolean{
+         if(username.isEmpty() || password.isEmpty()) {
+             return false
+         }
+         if(username in existingUsers) {
+             return false
+         }
+         if(password != confirmedPassword) {
+             return false
+         }
+         if(password.count { it.isDigit() } < 2) {
+             return false
+         }
          return true
-
 
      }
 }
