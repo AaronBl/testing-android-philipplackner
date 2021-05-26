@@ -15,8 +15,8 @@ interface ShoppingRepository {
 
     fun observeTotalPrice(): LiveData<Float>
 
+    fun observeAllShoppingItems(): LiveData<List<ShoppingItem>>
+
     suspend fun searchForImage(imageQuery: String) : Resource<ImageResponse>
-
-
 
 }

@@ -1,7 +1,8 @@
-package com.fintecimal.testandroidphilipplackner
+package com.fintecimal.testandroidphilipplackner.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.fintecimal.testandroidphilipplackner.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
