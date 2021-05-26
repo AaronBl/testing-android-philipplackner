@@ -19,7 +19,7 @@ android {
 
         buildConfigField("String", "Api_key", Api_key)
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.fintecimal.testandroidphilipplackner.HiltTestRunner"
     }
 
     buildTypes {
@@ -104,7 +104,6 @@ dependencies {
 
     //Dagger - Hilt
     implementation "com.google.dagger:hilt-android:2.31-alpha"
-
     kapt "com.google.dagger:hilt-android-compiler:2.31.2-alpha"
 
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
@@ -132,6 +131,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation "org.mockito:mockito-core:2.28.2"
+    androidTestImplementation 'com.google.dagger:hilt-android-testing:2.28-alpha'
+    kaptAndroidTest 'com.google.dagger:hilt-android-compiler:2.28-alpha'
+
+
 
 
 }
