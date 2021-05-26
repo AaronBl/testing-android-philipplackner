@@ -33,6 +33,10 @@ class DefaultShoppingRepository @Inject constructor(
         return  shoppingDao.observeTotalPrice()
     }
 
+    override fun observeAllShoppingItems(): LiveData<List<ShoppingItem>> {
+        return shoppingDao.observeAllShoppingItems()
+    }
+
     override suspend fun searchForImage(imageQuery: String): Resource<ImageResponse> {
         return try {
             val response = pixabayAPI.searchForImage(imageQuery)

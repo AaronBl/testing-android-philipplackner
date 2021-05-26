@@ -47,6 +47,10 @@ class FakeShoppingRepository : ShoppingRepository {
         return observableTotalPrice
     }
 
+    override fun observeAllShoppingItems(): LiveData<List<ShoppingItem>> {
+        return observableShoppingItems
+    }
+
     override suspend fun searchForImage(imageQuery: String): Resource<ImageResponse> {
             return  if(shouldReturnError){
                 Resource.error("Error",null)
