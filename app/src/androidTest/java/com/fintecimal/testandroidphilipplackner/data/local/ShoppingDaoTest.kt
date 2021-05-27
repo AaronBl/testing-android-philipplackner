@@ -6,6 +6,9 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import com.fintecimal.testandroidphilipplackner.getOrAwaitValue
+import com.fintecimal.testandroidphilipplackner.launchFragmentInHiltContainer
+import com.fintecimal.testandroidphilipplackner.ui.ImagePickFragment
+import com.fintecimal.testandroidphilipplackner.ui.ShoppingFragment
 import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.HiltAndroidApp
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -40,6 +43,13 @@ class ShoppingDaoTest {
     fun setUp() {
         hiltRule.inject()
         dao = database.shoppingDao()
+    }
+
+    @Test
+    fun testLaunchFragmentInHiltConteainer(){
+        launchFragmentInHiltContainer<ImagePickFragment> {
+
+        }
     }
 
     @Test

@@ -13,6 +13,7 @@ import com.fintecimal.testandroidphilipplackner.other.Resource
 import com.fintecimal.testandroidphilipplackner.repositories.ShoppingRepository
 import kotlinx.coroutines.launch
 
+
 class ShoppingViewModel @ViewModelInject constructor(
     private val repository: ShoppingRepository
 ): ViewModel() {
